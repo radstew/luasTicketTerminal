@@ -347,7 +347,7 @@ public class LuasTicket {
 		while (currentCashEntered < currentTransactionPrice) {
 			balanceRemining = Math.round((currentTransactionPrice - currentCashEntered) * 100) / 100.00;
 			System.out.println("==========================================");
-			System.out.println("Insert remining balance: \n " + balanceRemining);
+			System.out.println("Insert remining balance: \n " +"€" + balanceRemining);
 			System.out.println("==========================================");
 			String  insert = input.next();
 			
@@ -367,7 +367,8 @@ public class LuasTicket {
 		String finishTransactionMessage = ".";
 			if  (currentCashEntered > currentTransactionPrice) {
 				customerChange = Math.round((currentCashEntered - currentTransactionPrice) * 100) / 100.00;
-				finishTransactionMessage = " and " + customerChange + " change.";
+				finishTransactionMessage = " and €"
+						+ "" + customerChange + " change.";
 			}
 		System.out.println("Pickup your " + currentNumberOfTickets + " ticket/s" + finishTransactionMessage  + 
 				"\n    Have nice Trip \n ");
@@ -382,12 +383,12 @@ public class LuasTicket {
 		System.out.println("******************************************");
 		System.out.println("Number of transactions in this machine: " + numberOfTransactions); 
 		System.out.println("Total ticket sold in this machine: " + numberOfTicketsSold);
-		System.out.println("Total cash entered into this machine: " + totalCashEntered);
-		System.out.println("Average cah per transaction: " + averageCashPerTransaction);
+		System.out.println("Total cash entered into this machine: €" + totalCashEntered);
+		System.out.println("Average cash per transaction: €" + averageCashPerTransaction);
 		System.out.println("****************************************** \n ");
 		System.out.println("******************************************");
 		System.out.println(" Enter t for system tests \n "
-				+ " any letter to back to main screen");
+				+ "any letter to back to main screen");
 		System.out.println("****************************************** \n ");
 		
 		String userInput = input.next();
